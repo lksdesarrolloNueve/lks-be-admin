@@ -1,0 +1,72 @@
+<h2 mat-dialog-title>{{encabezado}} </h2>
+<mat-dialog-content class="mat-typography">
+    <p></p>
+    <div class="row">
+        <mat-form-field class="col-md-6" appearance="outline">
+            <mat-label>Persona Juridica</mat-label>
+            <mat-select [formControl]="personalidad" (selectionChange)="opcionTpersona()">
+                <mat-option *ngFor="let personalidad of listaTipoPersona" [value]="personalidad">
+                    {{personalidad.descripcion}}
+                </mat-option>
+            </mat-select>
+            <mat-icon matSuffix>transgender</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="col-md-6" appearance="outline">
+            <mat-label>Filtros de Busqueda</mat-label>
+            <input matInput [formControl]="filtro"  #input>
+        </mat-form-field>
+    </div>
+    <!--Cuerpo de la tabla-->
+    <div class="mat-elevation-z8 table-responsive">
+        <table aria-label="Busqueda de clientes" mat-table [dataSource]="dataSourceCliente" matSort>
+            <!-- No. Cliente Column -->
+            <ng-container matColumnDef="noCliente">
+                <th id="cliente" mat-header-cell *matHeaderCellDef>N&uacute;mero de {{lblCliente}} </th>
+                <td mat-cell *matCellDef="let persona"> {{persona.cliente.numeroCliente}} </td>
+            </ng-container>
+
+            <!-- Nombre Column -->
+            <ng-container matColumnDef="nombre">
+                <th id="nombre" mat-header-cell style="padding: 16px;" *matHeaderCellDef>Nombre </th>
+                <td mat-cell style="padding: 16px;" *matCellDef="let persona">{{persona.sujeto.nombres}}
+                    {{persona.sujeto.apellidoPaterno}} {{persona.sujeto.apellidoMaterno}}
+                    {{persona.moral.empresaId.razonSocial}}</td>
+            </ng-container>
+
+            <!-- Clasificacion Column -->
+            <ng-container matColumnDef="tipoCliente">
+                <th id="tipoSocio" style="padding: 16px;" mat-header-cell *matHeaderCellDef class="mayuscula">Tipo
+                    {{lblCliente}}</th>
+                <td mat-cell style="padding: 16px;" *matCellDef="let persona">
+                    {{persona.cliente.tipoSocioId.descripcion}} </td>
+            </ng-container>
+            <!-- sucursal -->
+            <ng-container matColumnDef="sucursal">
+                <th id="sucursal" style="padding: 16px;" mat-header-cell *matHeaderCellDef> Sucursal</th>
+                <td mat-cell style="padding: 16px;" *matCellDef="let persona">
+                    {{persona.cliente.sucursalId.nombreSucursal}} </td>
+            </ng-container>
+            <!-- estado -->
+            <ng-container matColumnDef="estado">
+                <th id="estatus" mat-header-cell *matHeaderCellDef> Estatus</th>
+                <td mat-cell *matCellDef="let persona"><span *ngIf="persona.cliente.estatus==true">Activo</span>
+                    <span *ngIf="persona.cliente.estatus==false">Inactivo</span>
+                </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row id="poliza" (click)="getRecord(row)" *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+
+
+    <mat-paginator [length]="totalRows" [pageSize]="pageSize" [pageIndex]="currentPage"
+        [pageSizeOptions]="pageSizeOptions" (page)="pageChanged($event)" aria-label="Select de usuarios"
+        showFirstLastButtons>
+    </mat-paginator>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button [mat-dialog-close]="1" color="warn">Cancelar</button>
+</mat-dialog-actions>

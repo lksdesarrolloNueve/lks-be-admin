@@ -1,0 +1,306 @@
+{
+  "listaSucursales":"http://177.242.201.2:8481/catalogos/listaSucursales",
+  "crudSucursales": "http://177.242.201.2:8481/catalogos/crudSucursales",
+
+  "listaTipoSocio":"http://177.242.201.2:8481/catalogos/spsTipoSocio",
+  "crudtipossocios":"http://177.242.201.2:8481/catalogos/crudTipoSocio",
+
+  "listaNacionalidades":"http://177.242.201.2:8481/catalogos/spsCatNacionalidad",
+  "crudCatNacionalidad":"http://177.242.201.2:8481/catalogos/crudCatNacionalidad",
+
+  "spsCalidadesExtranjeros" : "http://177.242.201.2:8481/catalogos/spscalidadextranjero",
+  "crudCalidadesExtranjeros":"http://177.242.201.2:8481/catalogos/crudcaliextranjero",
+
+  "spsActividadesPLD" : "http://177.242.201.2:8481/catalogos/listaActividadesPLD",
+  "crudActividadesPLD": "http://177.242.201.2:8481/catalogos/crudActividadesPLD",
+
+  "listaBancoSat": "http://177.242.201.2:8481/catalogos/spsBancoSat",
+  "crudBancoSat":"http://177.242.201.2:8481/catalogos/crudBancoSat",
+
+  "spsClasificacionCred" : "http://177.242.201.2:8481/catalogos/lista-clasificacion-cred",
+  "crudClasificacionCred": "http://177.242.201.2:8481/catalogos/crud-clasificacion-cred",
+
+  "listaFinalidadCredito" : "http://177.242.201.2:8481/catalogos/listaFinalidadesCred",
+  "crudFinalidadCredito": "http://177.242.201.2:8481/catalogos/crudFinalidadesCred",
+
+  "listaMonedas":"http://177.242.201.2:8481/catalogos/listaMonedas",
+  "crudMonedas":"http://177.242.201.2:8481/catalogos/crudMonedas",
+
+  "listaGarantia":"http://177.242.201.2:8481/catalogos/spsGarantia",
+  "crudGarantia": "http://177.242.201.2:8481/catalogos/crudGarantia",
+  "listaGarantiaById":"http://177.242.201.2:8481/catalogos/spsGarantiaById",
+
+  "listaCategorias":"http://177.242.201.2:8481/catalogos/spsCatalogoCategoria",
+"crudCategoria": "http://177.242.201.2:8481/catalogos/crudCatalogoCategorias",
+
+"listaGenerales":"http://177.242.201.2:8481/catalogos/spsCatalogoGeneral",
+"crudGenerales": "http://177.242.201.2:8481/catalogos/crudCatalogoGenerales",
+
+  "listaEstadoCred":"http://177.242.201.2:8481/catalogos/lista-estado-cred",
+  "crudEstadoCred": "http://177.242.201.2:8481/catalogos/crud-estado-cred",
+
+  "listaUdis": "http://177.242.201.2:8481/catalogos/listaUdis",
+  "crudUdis": "http://177.242.201.2:8481/catalogos/crudUdis",
+
+  "listaTipoAmortizacion" : "http://177.242.201.2:8481/catalogos/listaTiposAmortizacion",
+  "crudTipoAmortizacion": "http://177.242.201.2:8481/catalogos/crudTiposAmortizacion",
+
+  "listaServidores" : "http://177.242.201.2:8481/catalogos/listaServidores",
+  "crudServidores" : "http://177.242.201.2:8481/catalogos/crudServidores",
+
+  "listaEstados" : "http://177.242.201.2:8481/catalogos/spsEstado",
+  "crudEstados"  : "http://177.242.201.2:8481/catalogos/crudEstado",
+
+  "listaGeneralCategoria": "http://177.242.201.2:8481/catalogos/spsGeneralesCategoria",
+
+  "listaDiaInhabil" : "http://177.242.201.2:8481/catalogos/listaDiasInhabiles",
+  "crudDiaInhabil" : "http://177.242.201.2:8481/catalogos/crudDiasInhabiles",
+
+  "listaJsonCuentas" : "http://177.242.201.2:8481/catalogos/jsonCuentas",
+  "spsCuentasContables" : "http://177.242.201.2:8481/catalogos/spsCuentasContables",
+  "listaRubro" :"http://177.242.201.2:8481/catalogos/lista-rubro",
+  "listaTipoCuenta" : "http://177.242.201.2:8481/catalogos/lista-tipo-cuenta",
+  "listaNaturaleza" : "http://177.242.201.2:8481/catalogos/lista-naturaleza",
+  "spsCuentasAnexo24" : "http://177.242.201.2:8481/catalogos/spsCuentasAnexo24",
+  "crudCuentaContable" : "http://177.242.201.2:8481/catalogos/crudCuentaContable",
+  "spsCuentasContablesByID" : "http://177.242.201.2:8481/catalogos/spsCuentasContablesByID",
+
+  "spsLocalidades" : "http://177.242.201.2:8481/catalogos/spsLocalidades",
+  "crudLocalidad" : "http://177.242.201.2:8481/catalogos/crudLocalidad",
+
+  "listaCiudades" : "http://177.242.201.2:8481/catalogos/spsCiudades",
+  "crudCiudades" : "http://177.242.201.2:8481/catalogos/crudCiudades",
+  "listaCiudadEstado" : "http://177.242.201.2:8481/catalogos/spsCiudadesEstado",
+
+  "listaActividadesV": "http://177.242.201.2:8481/catalogos/listaActividadesVul",
+  "crudActividadesVul" : "http://177.242.201.2:8481/catalogos/crudActividadesVul",
+
+  "crudColonia" : "http://177.242.201.2:8481/catalogos/crudColonias",
+  "listaColoniaCiudad":"http://177.242.201.2:8481/catalogos/spsColoniasbyid",
+
+  "listaDivision":"http://177.242.201.2:8481/catalogos/spsDivision",
+  "crudDivision": "http://177.242.201.2:8481/catalogos/crudDivision",
+  "listaGrupo": "http://177.242.201.2:8481/catalogos/spsGrupo",
+  "listaGrupoDivision":"http://177.242.201.2:8481/catalogos/spsGrupoDivision",
+  "crudGrupo": "http://177.242.201.2:8481/catalogos/crudGrupo",
+  "listaSubgrupo": "http://177.242.201.2:8481/catalogos/spsSubgrupo",
+  "listaSubPrincipal": "http://177.242.201.2:8481/catalogos/spsSubgrupoPrincipal",
+  "crudSubgrupo": "http://177.242.201.2:8481/catalogos/crudSubgrupo",
+  "listaUnitario": "http://177.242.201.2:8481/catalogos/spsUnitario",
+  "listaUnitarioSubgrupo": "http://177.242.201.2:8481/catalogos/spsUnitarioSubgrupo",
+  "crudUnitario": "http://177.242.201.2:8481/catalogos/crudGrupoUnitario",
+  "listaOcupacionesSinco": "http://177.242.201.2:8481/catalogos/spsOcupaciones",
+  "crudOcupacion": "http://177.242.201.2:8481/catalogos/crudOcupacion",
+
+  "listaFormasPago" :"http://177.242.201.2:8481/catalogos/spsFormasPago",
+  "crudFormasPago" :"http://177.242.201.2:8481/catalogos/crudFormasPago",
+
+  "crudBancoSiti" : "http://177.242.201.2:8481/catalogos/crudBancoSiti",
+  "listaBancoSiti":"http://177.242.201.2:8481/catalogos/listaBancoSiti",
+
+  "crudCuentaBancaria" : "http://177.242.201.2:8481/catalogos/crudCuentasB",
+  "listaCuentaBancaria": "http://177.242.201.2:8481/catalogos/spsCuentasB",
+  "listaCuentaBancariaID":"http://177.242.201.2:8481/catalogos/spscuentasbyid",
+  "listaCuentaBancariaSuc":"http://177.242.201.2:8481/catalogos/spscuentasbsuc",
+
+  "listaSectores" : "http://177.242.201.2:8481/catalogos/lista-sector",
+  "crudSectores"  : "http://177.242.201.2:8481/catalogos/crud-sector",
+
+  "listaSubSectores" : "http://177.242.201.2:8481/catalogos/lista-sub-sector",
+  "listaSubSectoresFil" : "http://177.242.201.2:8481/catalogos/lista-sub-sector-by-sector",
+  "crudSubSectores" : "http://177.242.201.2:8481/catalogos/crud-sub-sector",
+
+  "listaRamas" : "http://177.242.201.2:8481/catalogos/lista-rama",
+  "listaRamasFil" : "http://177.242.201.2:8481/catalogos/lista-rama-by-sub-sector",
+  "crudRamas" :"http://177.242.201.2:8481/catalogos/crud-rama",
+
+  "listaSubRamas" : "http://177.242.201.2:8481/catalogos/lista-sub-rama",
+  "listaSubRamasFil" : "http://177.242.201.2:8481/catalogos/lista-sub-rama-by-rama",
+  "crudSubRamas"  : "http://177.242.201.2:8481/catalogos/crud-sub-rama",
+  "listaAvisos": "http://177.242.201.2:8481/catalogos/lista-avisos",
+  "crudAvisos": "http://177.242.201.2:8481/catalogos/crudAvisos",
+
+  "listaINPC" : "http://177.242.201.2:8481/catalogos/lista-inpc",
+  "crudINPC": "http://177.242.201.2:8481/catalogos/crud-inpc",
+
+  "listaBoveda":"http://177.242.201.2:8481/catalogos/listaBoveda",
+  "listaBovedaSuc":"http://177.242.201.2:8481/catalogos/listaBovedaSucursal",
+  "crudBoveda" : "http://177.242.201.2:8481/catalogos/crudBoveda",
+
+  "spsProductosServicios": "http://177.242.201.2:8481/catalogos/listaProductoServicios",
+  "crudProductoServicios": "http://177.242.201.2:8481/catalogos/crudProductosServicios",
+
+  "spsRecargaTelefonica": "http://177.242.201.2:8481/catalogos/listaRecargaTelefonica",
+  "crudRecargaTelefonica": "http://177.242.201.2:8481/catalogos/crudRecargaTelefonica",
+
+  "listaISR" :"http://177.242.201.2:8481/catalogos/lista-isr",
+  "crudISR" :"http://177.242.201.2:8481/catalogos/crud_isr",
+
+
+  "listaCajas": "http://177.242.201.2:8481/catalogos/spsCaja",
+  "crudCaja": "http://177.242.201.2:8481/catalogos/crudCaja",
+
+  "listaClaseActividades" : "http://177.242.201.2:8481/catalogos/lista-clase-act",
+  "listaClaseActividadesFil" : "http://177.242.201.2:8481/catalogos/lista-clase-act-by-sub-rama",
+  "crudClaseActividades"  : "http://177.242.201.2:8481/catalogos/crud-clase-act",
+
+  "listaInversiones": "http://177.242.201.2:8481/catalogos/listaInversiones",
+  "crudInversiones": "http://177.242.201.2:8481/catalogos/crudInversiones",
+
+  "listaTipoPlazo": "http://177.242.201.2:8481/catalogos/lista-tipo-plazo",
+  "crudTipoPlazo": "http://177.242.201.2:8481/catalogos/crud-tipo-plazo",
+
+
+  "jsonMenu" : "http://177.242.201.2:8481/catalogos/jsonMenu",
+  "listaMenus" : "http://177.242.201.2:8481/catalogos/listaMenus",
+  "crudMenu" : "http://177.242.201.2:8481/catalogos/crudMenu",
+  "altaPermisos" : "http://177.242.201.2:8481/catalogos/altaPermisos",
+  "jsonPermisosRol" : "http://177.242.201.2:8481/catalogos/spsJsonPermisosRol",
+  "permisosRol" : "http://177.242.201.2:8481/catalogos/spsPermisosRol",
+  "spsPermisosRolbyUsuario" : "http://177.242.201.2:8481/catalogos/spsPermisosRolbyUsuario",
+
+  "listaRangoInversiones": "http://177.242.201.2:8481/catalogos/lista-rango-inversiones",
+  "crudRangoInversiones": "http://177.242.201.2:8481/catalogos/crud-rango-inversiones",
+
+  "listaMovCaja": "http://177.242.201.2:8481/catalogos/lista-mov-caja",
+  "listaFormaPagoMovCaja": "http://177.242.201.2:8481/catalogos/lista-forma-pago-mov-caja",
+  "listaTipoSocioMovCaja": "http://177.242.201.2:8481/catalogos/lista-tipo-socio-mov-caja",
+  "crudMovCaja": "http://177.242.201.2:8481/catalogos/crud-mov-caja",
+
+
+  "listaSucursalMovCaja": "http://177.242.201.2:8481/catalogos/lista-sucursal-mov-caja",
+  "listaDepreciaciones": "http://177.242.201.2:8481/catalogos/lista-depreciaciones",
+  "crudDepreciaciones": "http://177.242.201.2:8481/catalogos/crud-depreciaciones",
+
+
+  "listaProveedor": "http://177.242.201.2:8481/catalogos/spsProveedor",
+  "crudProveedor" : "http://177.242.201.2:8481/catalogos/crudProveedor",
+
+
+  "listaCalificacionCartera": "http://177.242.201.2:8481/catalogos/lista-calificacion-cartera",
+  "crudCalificacionCartera": "http://177.242.201.2:8481/catalogos/crud-calificacion-cartera",
+  "listaCalificacionCarteraById":"http://177.242.201.2:8481/catalogos/lista-calCartera-by-id",
+
+  "listaJsonAnexo24": "http://177.242.201.2:8481/catalogos/jsonCuentasAnexo24",
+  "spsCuentaAnexoById": "http://177.242.201.2:8481/catalogos/spsCuentasContablesAnexoByID",
+  "crudCuentaAnexo24": "http://177.242.201.2:8481/catalogos/crudCuentaContableAnexo",
+  "cargaAnexo24" : "http://177.242.201.2:8481/catalogos/cargaMasivaCuentasAnexo",
+
+  "listaCargos":"http://177.242.201.2:8481/catalogos/lista-cargos",
+  "crudCargos":"http://177.242.201.2:8481/catalogos/crud_cargos",
+
+
+  "listaIndicehh": "http://177.242.201.2:8481/catalogos/listaIndicehh",
+  "crudIndicehh": "http://177.242.201.2:8481/catalogos/crudIndicehh",
+
+
+  "listaCreditoRelacionado":"http://177.242.201.2:8481/catalogos/listaCreditoRel",
+  "CrudCreditoRelacionado":"http://177.242.201.2:8481/catalogos/crudCredRel",
+  
+
+  "crudUsuario": "http://177.242.201.2:8480/admin/realms/lks-core/users",
+  "crudRol": "http://177.242.201.2:8480/admin/realms/lks-core/roles",
+  "cerrarSesion": "http://177.242.201.2:8480/admin/realms/lks-core/sessions",
+  "listaUsuariosInformacion": "http://177.242.201.2:8481/catalogos/lista-usuarios",
+  "relacionarUsuarioSucu": "http://177.242.201.2:8481/catalogos/relacionar-usuario-sucursales",
+
+ 
+  "crudEntidad":"http://177.242.201.2:8481/catalogos/crud-entidad",
+  "listaEntidades" : "http://177.242.201.2:8481/catalogos/listaEntidades",
+
+
+  "listaDirectivoFuncionario": "http://177.242.201.2:8481/catalogos/lista-directivo-funcionario",
+  "crudDirectivoFuncionario": "http://177.242.201.2:8481/catalogos/crud-directivo-funcionario",
+  "listaDirectivoFuncionarioById":"http://177.242.201.2:8481/catalogos/lista-directivoFuncionario-by-id",
+  "listaDirectivoSucursalById":"http://177.242.201.2:8481/catalogos/lista-directivoSucursal-by-id",
+  "listaDirectivoSujetoById":"http://177.242.201.2:8481/catalogos/lista-directivoSujeto-by-id",
+  
+  "listaFamiliarDirFunSucById": "http://177.242.201.2:8481/catalogos/lista-direcFuncionariosFam-by-IdSucursal",
+  "listaDirectivoFamiliarSujetoById": "http://177.242.201.2:8481/catalogos/lista-directivofamiliar-sujetoById",
+  "crudDirectivoFuncionarioFamiliar": "http://177.242.201.2:8481/catalogos/crud-directivos-funcionarios-familiares",
+
+
+  "listaTipoFondos":"http://177.242.201.2:8481/catalogos/listaTipoFondos",
+  "crudTipoFondos":"http://177.242.201.2:8481/catalogos/crudFondos",
+
+  "listaProductosSucursal": "http://177.242.201.2:8481/catalogos/lista_producto_sucursal",
+  "listaCajasBySucursal": "http://177.242.201.2:8481/catalogos/lista-cajas-by-sucursal",
+
+
+  "listaComite":"http://177.242.201.2:8481/catalogos/spsComite",
+  "crudComite":"http://177.242.201.2:8481/catalogos/crudComite",
+
+  
+  "spsCorreos": "http://177.242.201.2:8481/catalogos/spsCorreo",
+  "spsCorreosBYCves" : "http://177.242.201.2:8481/catalogos/spsCorreosBYCves",
+  "crudCorreos" : "http://177.242.201.2:8481/catalogos/crudCorreo",
+  "enviarCorreo": "http://177.242.201.2:8481/catalogos/enviarCorreo",
+  "enviarCorreoHTML" : "http://177.242.201.2:8481/catalogos/enviarCorreoHTML",
+  
+  "spsSMS":"http://177.242.201.2:8481/catalogos/spsSMS",
+  "spsSMSByCves": "http://177.242.201.2:8481/catalogos/spsSMSByCves",
+  "crudSMS":"http://177.242.201.2:8481/catalogos/crudSMS",
+
+  "crudCtasPermisos": "http://177.242.201.2:8481/catalogos/relacionar-permisos-usuarios",
+  "listaCtasPermisos": "http://177.242.201.2:8481/catalogos/lista-permisosUsuarios",
+  
+  "enviaSMS": "http://177.242.201.2:8481/catalogos/enviarSMS",
+
+  "listavalorUma": "http://177.242.201.2:8481/catalogos/listaValoresUma",
+  "crudUma": "http://177.242.201.2:8481/catalogos/crudUma",  
+  "crudAval": "http://177.242.201.2:8052/clientes/crudAval",
+  "listaAval": "http://177.242.201.2:8052/clientes/spsAvales",
+
+  "traspasoTercero": "http://177.242.201.2:8056/tesoreria/generaTraspasoTercero",
+
+  "cargaDias":"http://177.242.201.2:8481/catalogos/cargaMasivaDias",
+  "cargaCuentas":"http://177.242.201.2:8481/catalogos/cargaMasivaCuentas",
+
+  "spsEstadosNacionalidad": "http://177.242.201.2:8481/catalogos/spsEstadoNacionalidad",
+
+  "crudOpIntPreocupante" :"http://177.242.201.2:8481/catalogos/CrudOplPreocupantes",
+  "spsOpintPreocupante":"http://177.242.201.2:8481/catalogos/spsopintPreocupantes",
+  "spsReportePreocupante": "http://177.242.201.2:8481/catalogos/spsReportePreocupantes",
+
+
+  "listaPeps": "http://177.242.201.2:8481/catalogos/listaPeps",
+  "crudPeps": "http://177.242.201.2:8481/catalogos/crudPeps",
+  
+  "spsOpRelevante":"http://177.242.201.2:8052/clientes/spsOperacionRelevante",
+  "spsValorDolar": "http://177.242.201.2:8481/catalogos/spsDolar",
+
+
+  "spsReporteRel": "http://177.242.201.2:8052/clientes/spsReporteRelevante",
+
+  "spsPBA": "http://177.242.201.2:8481/catalogos/spsPBA",
+  "crudPBA": "http://177.242.201.2:8481/catalogos/crudPBA",
+  "reportePBA": "http://177.242.201.2:8481/catalogos/reportePBA",
+  
+
+  "spsUsuariosChat":"http://177.242.201.2:8481/catalogos/spsUsuarios",
+ 
+  "spsFondeoBancario": "http://177.242.201.2:8481/catalogos/spsFondeoBancario",
+  "crudFondeoBancario":"http://177.242.201.2:8481/catalogos/crudFondeoBancario",
+  "crudVolatilidad":"http://177.242.201.2:8481/catalogos/crudVolatilidad", 
+  "spsVolatilidad": "http://177.242.201.2:8481/catalogos/spsVolatilidad",
+  "spsFraccParam": "http://177.242.201.2:8481/catalogos/spsFraccParam",
+  "crudFraccParametros": "http://177.242.201.2:8481/catalogos/crudFraccParam",
+
+  "crudGastos":        "http://177.242.201.2:8481/catalogos/crudGasto",
+  "listaGastos":       "http://177.242.201.2:8481/catalogos/spsGastos",
+  "listaGastosPorSuc": "http://177.242.201.2:8481/catalogos/spsGastosBySuc",
+
+  "spsTipoActivos":"http://177.242.201.2:8481/catalogos/listaTipoActivo",
+  "crudTipoActivos":"http://177.242.201.2:8481/catalogos/crudTipoActivo",
+  "spsTipoBajaActivo":"http://177.242.201.2:8481/catalogos/listaTipoBaja",
+  "crudTipoBajaActivo":"http://177.242.201.2:8481/catalogos/crudTipoBaja",
+  "crudParametros":"http://177.242.201.2:8481/catalogos/crudParametros",
+  "spsParametros": "http://177.242.201.2:8481/catalogos/spsParametros",
+  "crudTipoCuentaBaja":"http://177.242.201.2:8481/catalogos/crudTipoCuentaB",
+  "spsTipoCuentaBaja":"http://177.242.201.2:8481/catalogos/spsTipoCuentaAct"
+
+
+
+
+
+}
