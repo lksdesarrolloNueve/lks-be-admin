@@ -67,7 +67,6 @@ export class ClienteBEComponent {
       .subscribe(
         (data) => {
           this.blockUI.stop();
-          console.log(data);
           this.listSucursales = data.info;
           this.dataSourceClientesBE = new MatTableDataSource(
             this.listSucursales

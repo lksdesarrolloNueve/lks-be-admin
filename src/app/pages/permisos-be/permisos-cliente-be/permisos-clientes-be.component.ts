@@ -195,10 +195,6 @@ export class PermisosClientesBeComponent {
    * @param elemento - Elemento a gestionar
    */
   gestionRol(elemento) {
-    console.log(elemento);
-
-    console.log(elemento.generales_id);
-
     this.listaPermisos = [];
     this.checklistSelection = new SelectionModel<MenuNode>(true /* multiple */);
 
@@ -213,7 +209,6 @@ export class PermisosClientesBeComponent {
       .subscribe(
         (data) => {
           this.listaPermisos = data.info;
-          console.log(data.info);
           for (let i = 0; i < this.treeControl.dataNodes.length; i++) {
             for (let per of this.listaPermisos) {
               if (per.pathurl) {
@@ -378,8 +373,6 @@ export class PermisosClientesBeComponent {
           menus: this.listMenus,
         };
 
-        console.log(data);
-
         this.service
           .registrar(
             {
@@ -391,7 +384,6 @@ export class PermisosClientesBeComponent {
           .subscribe(
             (resultG) => {
               this.blockUI.stop();
-              console.log(resultG);
               if (resultG.codigo === '0') {
                 this.service.showNotification(
                   'top',
@@ -471,8 +463,6 @@ export class PermisosClientesBeComponent {
    * Metodo para listar los roles be
    */
   spsRolesBe() {
-    console.log('ROLES BE');
-
     this.blockUI.start('Cargando datos...');
 
     this.service
@@ -487,8 +477,6 @@ export class PermisosClientesBeComponent {
         (data) => {
           this.blockUI.stop();
           this.listaRolesBe = data.info;
-          //console.log(data.info);
-          console.log(this.listaRolesBe);
         },
         (error) => {
           this.blockUI.stop();

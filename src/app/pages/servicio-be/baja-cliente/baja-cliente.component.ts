@@ -61,7 +61,7 @@ export class BajaClienteComponent {
   ) {
     const params = this.activedRoute.snapshot.params;
     this.origenID = environment.generales.origenMov;
-    console.log(params.id);
+
     this.getUser();
     this.getClientes(params.id);
     this.spsRolesBe();
@@ -103,8 +103,6 @@ export class BajaClienteComponent {
       // Accion a realizar
       accion: opcion,
     };
-
-    console.log(JSONGuardar);
 
     this.blockUI.start('Guardando ...');
 
@@ -186,7 +184,6 @@ export class BajaClienteComponent {
         (data) => {
           this.blockUI.stop();
           this.listaStatusBe = data.info;
-          console.log(this.listaStatusBe);
         },
         (error) => {
           this.blockUI.stop();
@@ -266,15 +263,12 @@ export class BajaClienteComponent {
       accion: 1,
     };
 
-    console.log(jsonGuardar);
-
     this.service.getListByObjet(jsonGuardar, 'spsClientesBe').subscribe(
       (response) => {
         this.blockUI.stop();
-        //console.log(response);
+
         this.valorRespuesta = response; // Guardar el valor de respuesta en la variable 'valorRespuesta'
         this.responseCliente = response;
-        console.log(this.valorRespuesta);
       },
       (error) => {
         this.blockUI.stop();
