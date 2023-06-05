@@ -12,6 +12,13 @@ import { environment } from '../../../../environments/environment';
 import { PermisosService } from '../../../shared/service/permisos.service';
 import { Router } from '@angular/router';
 
+/**
+ * @autor: Julio Samuel Torres Reyes
+ * @version: 1.0.0
+ * @fecha: 05/06/2023
+ * @descripcion: Vista de formulario para dar de alta un cliente en banca electronica
+ */
+
 //interface de roles en el sistema
 interface rolOpciones {
   value: string;

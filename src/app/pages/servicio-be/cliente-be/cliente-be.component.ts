@@ -6,6 +6,13 @@ import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
+/**
+ * @autor: Julio Samuel Torres Reyes
+ * @version: 1.0.0
+ * @fecha: 05/06/2023
+ * @descripcion: Vista de Buscador de clientes en Banca electronica
+ */
+
 @Component({
   selector: 'cliente-be',
   moduleId: module.id,

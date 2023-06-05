@@ -16,6 +16,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { GestionGenericaService } from '../../../shared/service/gestion/gestion.service';
 
+/**
+ * @autor: Juan Jesus Ricardo Gloria Gloria
+ * @version: 1.0.0
+ * @fecha: 05/06/2023
+ * @descripcion: Vista de Buscador de clientes
+ */
+
 /* Variables globales */
 const globales = {
   cliente: 'Cliente',

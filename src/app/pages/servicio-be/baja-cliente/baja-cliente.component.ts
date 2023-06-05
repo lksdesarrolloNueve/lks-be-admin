@@ -18,6 +18,13 @@ import { GestionGenericaService } from '../../../shared/service/gestion/gestion.
 import { environment } from '../../../../environments/environment';
 import { PermisosService } from '../../../shared/service/permisos.service';
 
+/**
+ * @autor: Julio Samuel Torres Reyes y Carlos Eduardo Mata Rojas
+ * @version: 1.0.0
+ * @fecha: 05/06/2023
+ * @descripcion: Vista de baja cliente y actualizar cliente en banca electronica
+ */
+
 @Component({
   selector: 'baja-cliente',
   moduleId: module.id,

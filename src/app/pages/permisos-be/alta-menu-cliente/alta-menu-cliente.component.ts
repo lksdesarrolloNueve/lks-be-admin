@@ -20,6 +20,13 @@ import {
 } from '@angular/material/tree';
 import { map, startWith } from 'rxjs/operators';
 
+/**
+ * @autor: Carlos Eduardo Mata Rojas
+ * @version: 1.0.0
+ * @fecha: 05/06/2023
+ * @descripcion: Vista para dar de alta un menu para la banca electronica
+ */
+
 /** Flat node with expandable and level information */
 interface MenuNode {
   expandable: boolean;

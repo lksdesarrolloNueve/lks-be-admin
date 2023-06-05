@@ -13,8 +13,12 @@ import { AdministracionRolesComponent } from '../../../pages/configuracion/rol-m
 import { verificacionModalComponent } from '../../../pages/modales/verificacion-modal/verificacion-modal.component';
 
 /**
- * Node for to-do item
+ * @autor: Carlos Eduardo Mata Rojas
+ * @version: 1.0.0
+ * @fecha: 05/06/2023
+ * @descripcion: asigna permisos por el rol de la banca electronica
  */
+
 export class TodoItemNode {
   submenus: TodoItemNode[];
   menu_id: number;
