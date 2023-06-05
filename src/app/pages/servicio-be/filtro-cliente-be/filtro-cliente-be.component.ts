@@ -40,7 +40,7 @@ export class FiltroBEComponent {
   telefono: number;
   correo: any;
   origenid: any; //id de origen de inseccion del cliente be
-  estatus: number = 438; // Estatus del cliente BE (por defecto es ACTIVO - 438)
+  estatus: any; // Estatus del cliente BE (por defecto es ACTIVO - 438)
   resultadoCrud: any; //mesaje de inserccion
   myForm: FormGroup; // datos del formulario
   rolID: any;
@@ -67,6 +67,7 @@ export class FiltroBEComponent {
     private servicePermisos: PermisosService
   ) {
     this.origenID = environment.generales.origenMov; // Origen del movimiento
+    this.estatus = environment.generales.cveEstatusBEAC;
     const params = this.activedRoute.snapshot.params; //obtener nombre del cliente
     this.getClientes(params); //obtener objeto del cliente seleccionado el alta-clientes mediante el nombre
     this.spsRolesBe(); //obtener roles disponibles
@@ -103,7 +104,7 @@ export class FiltroBEComponent {
         origen_id: this.origenID,
         telefono: this.myForm.get('telefono').value,
         correo: this.myForm.get('correo').value,
-        estatus_id: this.estatus,
+        estatus: this.estatus,
         rol_id: this.myForm.get('rol').value, // Convertir el valor booleano a un entero
       },
       // Accion a realizar
@@ -133,7 +134,6 @@ export class FiltroBEComponent {
             4,
             this.resultadoCrud.mensaje
           );
-          this.router.navigate(['/be-clientes']);
         }
       },
       (error) => {
@@ -141,10 +141,11 @@ export class FiltroBEComponent {
         this.service.showNotification('top', 'right', 4, error.Message);
       }
     );
+    this.router.navigate(['/be-clientes']);
   }
 
   //metodo para canselar accion y redireccionar a alta clientes
-  canselar() {
+  cancelar() {
     this.router.navigate(['/be-alta-cliente']);
   }
 

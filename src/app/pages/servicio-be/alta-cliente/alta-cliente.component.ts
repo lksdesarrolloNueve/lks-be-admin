@@ -15,6 +15,7 @@ import {
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { GestionGenericaService } from '../../../shared/service/gestion/gestion.service';
+import { environment } from '../../../../environments/environment';
 
 /**
  * @autor: Juan Jesus Ricardo Gloria Gloria
@@ -22,18 +23,6 @@ import { GestionGenericaService } from '../../../shared/service/gestion/gestion.
  * @fecha: 05/06/2023
  * @descripcion: Vista de Buscador de clientes
  */
-
-/* Variables globales */
-const globales = {
-  cliente: 'Cliente',
-  clientes: 'Clientes',
-};
-
-/* Interface lista catalago de clientes */
-interface CatalogoClientes {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'alta-cliente',
@@ -72,11 +61,7 @@ export class AltaClienteComponent {
   dataSourceClientes: MatTableDataSource<any>;
 
   //filtro por persona  juridica
-  listaCatalogoClientes: CatalogoClientes[] = [
-    { value: '55PF', viewValue: 'CLIENTE FÍSICO' },
-    { value: '55PM', viewValue: 'CLIENTE MORAL' },
-    { value: '55PE', viewValue: 'CLIENTE EXTRANJERO' },
-  ];
+  listaCatalogoClientes: any;
 
   formGetCliente: FormGroup;
 
@@ -84,8 +69,7 @@ export class AltaClienteComponent {
   @ViewChild(MatSort) sort: MatSort; //elementros a mostrar por hoja
   @BlockUI() blockUI: NgBlockUI; //animacion de carga al tardar peticion
 
-  lblClientes: string = globales.clientes;
-  lblCliente: string = globales.cliente;
+  listaTipoPersona: any;
 
   /**
    * Constructor de variables y componentes
@@ -98,6 +82,7 @@ export class AltaClienteComponent {
     private activedRoute: ActivatedRoute,
     private service: GestionGenericaService
   ) {
+    this.spstipoCliente();
     this.formGetCliente = this.formBuilder.group({
       filtro: new FormControl('', [Validators.required]),
       cvesocio: new FormControl('', [Validators.required]),
@@ -184,5 +169,24 @@ export class AltaClienteComponent {
         this.validateAllFormFields(control);
       }
     });
+  }
+
+  /**
+   * Metodo para listar los tipo de cliente
+   *
+   */
+  spstipoCliente() {
+    this.service
+      .getListByID(environment.categorias.catJuridica, 'listaGeneralCategoria')
+      .subscribe(
+        (data) => {
+          this.listaTipoPersona = data;
+          this.listaCatalogoClientes = this.listaTipoPersona;
+        },
+        (error) => {
+          this.blockUI.stop();
+          this.service.showNotification('top', 'right', 4, error.Message);
+        }
+      );
   }
 }
