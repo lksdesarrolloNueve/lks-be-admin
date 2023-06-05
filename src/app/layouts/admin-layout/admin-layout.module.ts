@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 //Componentes para CATALOGOS
@@ -75,7 +74,7 @@ import { OcupacionComponent } from '../../pages/configuracion/actividades-sinco/
 import { AdministracionOcupacionComponent } from '../../pages/configuracion/actividades-sinco/ocupacion/modal-ocupacion/administracion-ocupacion.component';
 import { CategoriaGeneralesComponent } from '../../pages/configuracion/categorias-generales/categoria-general.component';
 import { FormasPagoComponent } from '../../pages/configuracion/formas-pago/formas-pago.component';
-import { AdministracionFormasPago } from '../../pages/configuracion/formas-pago/modal-formas-pago/administracion-formas-pago.component'
+import { AdministracionFormasPago } from '../../pages/configuracion/formas-pago/modal-formas-pago/administracion-formas-pago.component';
 import { BancosSitiComponent } from '../../pages/configuracion/bancos-siti/bancos-siti.component';
 import { AdministracionBancoSitiComponent } from '../../pages/configuracion/bancos-siti/modal-bancos-siti/administracion-bancos-siti.component';
 import { CuentaBancariaComponent } from '../../pages/configuracion/cuentas-bancarias/cuentas-bancarias.component';
@@ -107,7 +106,7 @@ import { AdministracionCredRelComponent } from '../../pages/configuracion/credit
 import { AdminUsuariosComponent } from '../../pages/configuracion/rol-menu/admin-usuarios/admin-usuarios.component';
 import { AdministracionRolesComponent } from '../../pages/configuracion/rol-menu/admin-usuarios/modal-roles/admin-roles.component';
 import { EntidadesComponent } from '../../pages/configuracion/entidades/entidades.component';
-import { SucursalesSocioComponent } from "../../pages/modales/sucursales-socio/sucursales-socio.component";
+import { SucursalesSocioComponent } from '../../pages/modales/sucursales-socio/sucursales-socio.component';
 import { TipoFondosComponent } from '../../pages/configuracion/tipo-fondo/tipo-fondo.component';
 import { AdministracionFondos } from '../../pages/configuracion/tipo-fondo/modal-tipo-fondos/administracion-fondos.component';
 import { AmortizacionComponent } from '../../pages/configuracion/amortizacion/amortizacion.component';
@@ -143,8 +142,6 @@ import { ModalParametrosComponent } from '../../pages/configuracion/tipo-activos
 import { CuentasBajasComponent } from '../../pages/configuracion/tipo-activos/cuenta-bajas/cuenta-bajas.component';
 import { ModalCuentaActivoBajaComponent } from '../../pages/configuracion/tipo-activos/cuenta-bajas/modal-cuenta/modal-cuenta-baja.component';
 
-
-
 //Componentes para DIGITALIZACION
 
 import { MenusComponent } from '../../pages/configuracion/rol-menu/menus/menus.component';
@@ -153,7 +150,6 @@ import { RangoInversionesComponent } from '../../pages/configuracion/rango-inver
 import { AdministracionRangoInversionesComponent } from '../../pages/configuracion/rango-inversiones/modal-rango-inversiones/admin-rango-inversiones.component';
 import { MovimientosCajaComponent } from '../../pages/configuracion/movimientos-caja/movimientos-caja.component';
 //import { AdminMapaComponent } from '../../pages/clientes/empresa/modal-mapa/admin-mapa.component';
-
 
 //Componentes para CLIENTES
 
@@ -165,9 +161,7 @@ import { CreditosComponent } from '../../pages/configuracion/creditos/creditos.c
 import { CargosComponent } from '../../pages/configuracion/cargos/cargos.component';
 import { AdministracionCargosComponent } from '../../pages/configuracion/cargos/modal-cargos/administracion-cargos.component';
 
-
 //Componentes para CLIENTES
-
 
 import { BuscarClientesComponent } from '../../pages/modales/clientes-modal/buscar-clientes.component';
 import { DocumentosModalComponent } from '../../pages/modales/documentos-modal/documentos-modal.component';
@@ -175,13 +169,9 @@ import { DirecFuncionariosComponent } from '../../pages/configuracion/direc-func
 import { AdminBajaComponent } from '../../pages/configuracion/direc-funcionarios/modal-baja/admin-baja.component';
 import { SolicitudModalComponent } from '../../pages/modales/solicitud-modal/solicitud-modal.component';
 
-
-
-
-
-//Componentes para CONTABILIDAD.
-
-
+//Componentes para Gestion clientes.
+import { AltaClienteComponent } from '../../pages/servicio-be/alta-cliente/alta-cliente.component';
+import { ClienteBEComponent } from '../../pages/servicio-be/cliente-be/cliente-be.component';
 
 //componentes de conciliacion bancaria
 import { ComiteComponent } from '../../pages/configuracion/comite-credito/comite.component';
@@ -190,6 +180,11 @@ import { ComiteComponent } from '../../pages/configuracion/comite-credito/comite
 
 import { listaModalComponent } from '../../pages/modales/lista-modal/lista-modal.component';
 
+import { AltaMenuClienteComponent } from '../../pages/permisos-be/alta-menu-cliente/alta-menu-cliente.component';
+import { PermisosClientesBeComponent } from '../../pages/permisos-be/permisos-cliente-be/permisos-clientes-be.component';
+import { FiltroBEComponent } from '../../pages/servicio-be/filtro-cliente-be/filtro-cliente-be.component';
+import { BajaClienteComponent } from '../../pages/servicio-be/baja-cliente/baja-cliente.component';
+
 //Componentes para pld
 import { PepComponent } from '../../pages/configuracion/peps/peps.component';
 import { AdminPepsComponent } from '../../pages/configuracion/peps/modal-peps/admin-peps.component';
@@ -197,13 +192,9 @@ import { PbaComponent } from '../../pages/configuracion/pba/pba.component';
 import { ModalPbaComponent } from '../../pages/configuracion/pba/modal-pba/modal-pba.component';
 import { MaterialModule } from '../../material.module';
 
-
-
 //import { GoogleMapsModule } from '@angular/google-maps';
 import { JsonParsePipe } from '../../shared/pipes/jsonParse.pipe';
 import { NgxMaskModule } from 'ngx-mask';
-
-
 
 @NgModule({
   imports: [
@@ -214,9 +205,15 @@ import { NgxMaskModule } from 'ngx-mask';
     ReactiveFormsModule,
     //GoogleMapsModule,
     NgxMaskModule.forRoot(),
-    MaterialModule
+    MaterialModule,
   ],
   declarations: [
+    AltaMenuClienteComponent,
+    PermisosClientesBeComponent,
+    FiltroBEComponent,
+    ClienteBEComponent,
+    BajaClienteComponent,
+    AltaClienteComponent,
     CajasComponent,
     SucursalesComponent,
     AdministracionSucursalesComponent,
@@ -376,8 +373,6 @@ import { NgxMaskModule } from 'ngx-mask';
     ModalParametrosComponent,
     CuentasBajasComponent,
     ModalCuentaActivoBajaComponent,
-
-  ]
+  ],
 })
-
-export class AdminLayoutModule { }
+export class AdminLayoutModule {}
