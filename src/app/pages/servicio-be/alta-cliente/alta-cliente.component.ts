@@ -39,6 +39,7 @@ export class AltaClienteComponent {
   accion: number;
 
   lblResultado: String = '';
+  lblClientes = environment.globales.enteMayuscula;
 
   listaCliente: any = [];
   tablaCliente: any = [];

@@ -12,7 +12,7 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute, Params, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { GestionGenericaService } from '../../../shared/service/gestion/gestion.service';
 import { environment } from '../../../../environments/environment';
