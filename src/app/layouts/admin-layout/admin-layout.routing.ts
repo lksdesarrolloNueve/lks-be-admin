@@ -104,7 +104,7 @@ export const AdminLayoutRoutes: Routes = [
     component: AltaClienteComponent,
   },
   {
-    path: 'be-baja-cliente/:id',
+    path: 'be-baja-cliente',
     component: BajaClienteComponent,
   },
   { path: 'rol-clientes-be', component: PermisosClientesBeComponent },
@@ -113,7 +113,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: 'permisos-rol-be', component: PermisosClientesBeComponent },
   { path: 'alta-menu-be', component: AltaMenuClienteComponent },
   {
-    path: 'filtro-cliente-be/:id',
+    path: 'filtro-cliente-be',
     component: FiltroBEComponent,
   },
   {

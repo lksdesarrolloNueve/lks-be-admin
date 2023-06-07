@@ -12,7 +12,7 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { GestionGenericaService } from '../../../shared/service/gestion/gestion.service';
 import { environment } from '../../../../environments/environment';
@@ -34,7 +34,6 @@ export class AltaClienteComponent {
   title = 'estadias';
 
   //Variables
-  router: Router;
   titulo: string;
   accion: number;
 
@@ -78,6 +77,7 @@ export class AltaClienteComponent {
    */
   constructor(
     private http: HttpClient,
+    private router: Router,
     public dialog: MatDialog,
     private formBuilder: FormBuilder,
     private activedRoute: ActivatedRoute,
@@ -189,5 +189,21 @@ export class AltaClienteComponent {
           this.service.showNotification('top', 'right', 4, error.Message);
         }
       );
+  }
+
+  /**
+   * Metodo que redirecciona a alta cliente BE
+   * @param cliente - Cliente para dar de alta
+   */
+  altaCliente(cliente) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        accion: 2,
+        titulo: 'id',
+        cliente: cliente,
+      },
+    };
+    console.log(navigationExtras);
+    this.router.navigate(['/filtro-cliente-be'], navigationExtras);
   }
 }

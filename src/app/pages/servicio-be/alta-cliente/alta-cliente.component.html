@@ -204,9 +204,7 @@
                 mat-mini-fab
                 color="primary"
                 class="button-edit"
-                routerLink="/filtro-cliente-be/{{ element.nombres }} {{
-                  element.apellido_paterno
-                }} {{ element.apellido_materno }}"
+                (click)="altaCliente(element)"
               >
                 <mat-icon> description </mat-icon>
               </button>
