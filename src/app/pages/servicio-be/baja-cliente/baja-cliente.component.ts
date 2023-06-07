@@ -12,7 +12,7 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute, Params, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { GestionGenericaService } from '../../../shared/service/gestion/gestion.service';
 import { environment } from '../../../../environments/environment';
@@ -56,14 +56,20 @@ export class BajaClienteComponent {
     private router: Router,
     private formBuilder: FormBuilder,
     private service: GestionGenericaService,
-    private servicePermisos: PermisosService,
-    private activedRoute: ActivatedRoute
+    private servicePermisos: PermisosService
   ) {
-    const params = this.activedRoute.snapshot.params;
     this.origenID = environment.generales.origenMov;
 
+    const navigation = this.router.getCurrentNavigation();
+
+    if (navigation.extras.state !== undefined) {
+      const cliente = navigation.extras.state.cliente;
+      this.valorRespuesta = cliente;
+
+      this.estatus = this.valorRespuesta.estatusId;
+    }
+
     this.getUser();
-    this.getClientes(params.id);
     this.spsRolesBe();
     this.spsEstatus();
     this.spsMotivos();
@@ -89,8 +95,8 @@ export class BajaClienteComponent {
     const JSONGuardar = {
       //datos a insertar de los form controls
       datos: {
-        id_cliente_be: this.valorRespuesta.info[0].clienteBEId,
-        cliente_id: this.valorRespuesta.info[0].clienteID,
+        id_cliente_be: this.valorRespuesta.clienteBEId,
+        cliente_id: this.valorRespuesta.clienteID,
         usuario_alta_id: this.vUsuarioId,
         origen_id: this.origenID,
         estatus_id: this.myForm.get('estatus').value,
@@ -246,34 +252,5 @@ export class BajaClienteComponent {
   getUser() {
     //Usuario id y sucursal id.
     this.vUsuarioId = this.servicePermisos.usuario.id;
-  }
-
-  /**
-   * Metodo para obtener clientes de be previamente seleccionado en la pantalla anterior
-   * @param na - evento a filtrar
-   */
-  getClientes(na: string) {
-    this.blockUI.start('Cargando datos...');
-
-    const jsonGuardar = {
-      datos: {
-        filtro: na,
-        cvesocio: '',
-      },
-      accion: 1,
-    };
-
-    this.service.getListByObjet(jsonGuardar, 'spsClientesBe').subscribe(
-      (response) => {
-        this.blockUI.stop();
-
-        this.valorRespuesta = response; // Guardar el valor de respuesta en la variable 'valorRespuesta'
-        this.responseCliente = response;
-      },
-      (error) => {
-        this.blockUI.stop();
-        this.service.showNotification('top', 'right', 4, error.Message);
-      }
-    );
   }
 }

@@ -142,7 +142,7 @@
               <button
                 mat-mini-fab
                 color="primary"
-                routerLink="/be-baja-cliente/{{ element.nombreCompleto }}"
+                (click)="editarCliente(element)"
               >
                 <mat-icon>mode_edit</mat-icon>
               </button>

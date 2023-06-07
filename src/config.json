@@ -299,22 +299,19 @@
   "crudTipoCuentaBaja":"http://177.242.201.2:8481/catalogos/crudTipoCuentaB",
   "spsTipoCuentaBaja":"http://177.242.201.2:8481/catalogos/spsTipoCuentaAct",
 
-  "listaClientes":"http://localhost:9080/clientes-be/get-clientes",
-  "crudClientesBe":"http://localhost:9080/clientes-be/crud-clientes-be",
+  "listaClientes":"http://177.242.201.2:9081/clientes-be/get-clientes",
+  "crudClientesBe":"http://177.242.201.2:9081/clientes-be/crud-clientes-be",
 
-  "spsClientesBe":"http://localhost:9080/clientes-be/get-clientes-be",
-  "crudMenuClientes":"http://localhost:9080/menus-be/crud-menus-clientes",
-  "listaMenusBe":"http://localhost:9080/menus-be/get-menus-clientes",
-  "jsonMenusBe":"http://localhost:9080/menus-be/get-menus-clientes-json",
+  "spsClientesBe":"http://177.242.201.2:9081/clientes-be/get-clientes-be",
+  "crudMenuClientes":"http://177.242.201.2:9081/menus-be/crud-menus-clientes",
+  "listaMenusBe":"http://177.242.201.2:9081/menus-be/get-menus-clientes",
+  "jsonMenusBe":"http://177.242.201.2:9081/menus-be/get-menus-clientes-json",
 
-  "spsMotivosBe":"http://localhost:9080/clientes-be/get-motivos-be",
-  "spsEstatusBe":"http://localhost:9080/clientes-be/get-estatus-be",
-
-  "spsRolesBe":"http://localhost:9080/roles-be/get-roles-be",
-  "spsPermisosRolBe":"http://localhost:9080/roles-be/get-permisos-roles-be",
-  "crudPermisosRolBe":"http://localhost:9080/roles-be/crud-permisos-roles",
-  "spsEstatusBe":"http://localhost:9080/clientes-be/get-estatus-be",
-  "spsMotivosBe":"http://localhost:9080/clientes-be/get-motivos-be"
+  "spsRolesBe":"http://177.242.201.2:9081/roles-be/get-roles-be",
+  "spsPermisosRolBe":"http://177.242.201.2:9081/roles-be/get-permisos-roles-be",
+  "crudPermisosRolBe":"http://177.242.201.2:9081/roles-be/crud-permisos-roles",
+  "spsEstatusBe":"http://177.242.201.2:9081/clientes-be/get-estatus-be",
+  "spsMotivosBe":"http://177.242.201.2:9081/clientes-be/get-motivos-be"
 
 
 

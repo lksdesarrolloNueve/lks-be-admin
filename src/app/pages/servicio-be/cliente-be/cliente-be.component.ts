@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 
 /**
  * @autor: Julio Samuel Torres Reyes
@@ -41,6 +42,7 @@ export class ClienteBEComponent {
   @BlockUI() blockUI: NgBlockUI;
 
   constructor(
+    private router: Router,
     private service: GestionGenericaService,
     public dialog: MatDialog
   ) {
@@ -92,5 +94,22 @@ export class ClienteBEComponent {
     if (this.dataSourceClientesBE.paginator) {
       this.dataSourceClientesBE.paginator.firstPage();
     }
+  }
+
+  /**
+   * Metodo que redirecciona a la
+   * gestion del servicio de BE
+   * @param cliente - Datos a gestionar
+   */
+  editarCliente(cliente) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        accion: 2,
+        titulo: 'id',
+        cliente: cliente,
+      },
+    };
+
+    this.router.navigate(['/be-baja-cliente'], navigationExtras);
   }
 }

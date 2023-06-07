@@ -35,18 +35,15 @@ export class FiltroBEComponent {
   //variables
   title = 'alta-cliente';
   selectedRole: String; //mostrar rol seleccionado en el front
-  clienteID: Params; //id del cliente en banca electronica
-  clienteIDkey: any; //id del usuario keycloack
   telefono: number;
   correo: any;
-  origenid: any; //id de origen de inseccion del cliente be
   estatus: any; // Estatus del cliente BE (por defecto es ACTIVO - 438)
   resultadoCrud: any; //mesaje de inserccion
   myForm: FormGroup; // datos del formulario
   rolID: any;
   valorRespuesta: any; //id del rol por numero
   vUsuarioId: any; // Variable que guarda el id del usuario actual
-  origenID: any;
+  origenID: any; // id de origen de inseccion del cliente be
 
   @BlockUI() blockUI: NgBlockUI; //animacion de cargando al tarda peticion
 
@@ -68,8 +65,14 @@ export class FiltroBEComponent {
   ) {
     this.origenID = environment.generales.origenMov; // Origen del movimiento
     this.estatus = environment.generales.cveEstatusBEAC;
-    const params = this.activedRoute.snapshot.params; //obtener nombre del cliente
-    this.getClientes(params); //obtener objeto del cliente seleccionado el alta-clientes mediante el nombre
+
+    const navigation = this.router.getCurrentNavigation();
+
+    if (navigation.extras.state !== undefined) {
+      const cliente = navigation.extras.state.cliente;
+      this.valorRespuesta = cliente;
+    }
+
     this.spsRolesBe(); //obtener roles disponibles
     this.roles = this.valorRol;
 
@@ -98,9 +101,9 @@ export class FiltroBEComponent {
     const JSONGuardar = {
       //datos a insertar de los form controls
       datos: {
-        cliente_id: this.valorRespuesta.info[0].cliente_id,
+        cliente_id: this.valorRespuesta.cliente_id,
         usuario_alta_id: this.vUsuarioId,
-        tipo_cliente: this.valorRespuesta.info[0].persona_juridica,
+        tipo_cliente: this.valorRespuesta.persona_juridica,
         origen_id: this.origenID,
         telefono: this.myForm.get('telefono').value,
         correo: this.myForm.get('correo').value,
@@ -147,35 +150,6 @@ export class FiltroBEComponent {
   //metodo para canselar accion y redireccionar a alta clientes
   cancelar() {
     this.router.navigate(['/be-alta-cliente']);
-  }
-
-  /**
-   * Obtiene los clientes ya registrados en en el sistema
-   * @param params - evento a filtrar
-   */
-  getClientes(params: Params) {
-    this.blockUI.start('Cargando datos...');
-
-    //consulta a la funcion listarClientes donde toma el filtro por nombre de la variable params
-    const jsonGuardar = {
-      datos: {
-        filtro: params.id,
-        cvesocio: '',
-      },
-      accion: 1,
-    };
-
-    this.service.getListByObjet(jsonGuardar, 'listaClientes').subscribe(
-      (response) => {
-        this.blockUI.stop();
-        this.valorRespuesta = response; //guarda el resultado el la variable valorRespuesta
-        this.responseCliente = response; //guarda el resultado el la variable responseCliente
-      },
-      (error) => {
-        this.blockUI.stop();
-        this.service.showNotification('top', 'right', 4, error.Message);
-      }
-    );
   }
 
   /**
