@@ -71,8 +71,6 @@ export class FiltroBEComponent {
     if (navigation.extras.state !== undefined) {
       const cliente = navigation.extras.state.cliente;
       this.valorRespuesta = cliente;
-      console.log('Cliente: ');
-      console.log(this.valorRespuesta);
     }
 
     this.spsRolesBe(); //obtener roles disponibles

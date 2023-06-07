@@ -75,8 +75,6 @@ export class ClienteBEComponent {
           );
           this.dataSourceClientesBE.paginator = this.paginator;
           this.dataSourceClientesBE.sort = this.sort;
-          console.log('Clientes BE:');
-          console.log(this.listSucursales);
         },
         (error) => {
           this.blockUI.stop();
@@ -111,7 +109,7 @@ export class ClienteBEComponent {
         cliente: cliente,
       },
     };
-    console.log(navigationExtras);
+
     this.router.navigate(['/be-baja-cliente'], navigationExtras);
   }
 }

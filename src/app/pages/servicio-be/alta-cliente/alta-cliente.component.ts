@@ -203,7 +203,6 @@ export class AltaClienteComponent {
         cliente: cliente,
       },
     };
-    console.log(navigationExtras);
     this.router.navigate(['/filtro-cliente-be'], navigationExtras);
   }
 }

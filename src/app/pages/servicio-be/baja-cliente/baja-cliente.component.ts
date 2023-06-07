@@ -65,8 +65,7 @@ export class BajaClienteComponent {
     if (navigation.extras.state !== undefined) {
       const cliente = navigation.extras.state.cliente;
       this.valorRespuesta = cliente;
-      console.log('Cliente: ');
-      console.log(this.valorRespuesta);
+
       this.estatus = this.valorRespuesta.estatusId;
     }
 
@@ -110,8 +109,6 @@ export class BajaClienteComponent {
       // Accion a realizar
       accion: opcion,
     };
-
-    console.log(JSONGuardar);
 
     this.blockUI.start('Guardando ...');
 
